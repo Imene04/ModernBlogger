@@ -1,9 +1,8 @@
 <?php 
     function theme_enqueue_styles() {
-        // Charger le CSS principal
+        
         wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.15' );
-    
-        // Charger le CSS spécifique à chaque page
+
         if (is_home()) {
             wp_enqueue_style('home-style', get_template_directory_uri() . '/assets/css/index.css' , array(), '1.0.27');
         } elseif (is_page('about')) {
@@ -117,5 +116,54 @@ function get_category_icons() {
        
     );
 }
+add_action('tgmpa_register', 'modernblogger_register_required_plugins');
+
+function modernblogger_register_required_plugins() {
+    $plugins = array(
+        array(
+            'name'      => 'WooCommerce',
+            'slug'      => 'woocommerce',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'MailChimp for WordPress',
+            'slug'      => 'mailchimp-for-wp',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Ecwid Ecommerce Shopping Cart',
+            'slug'      => 'ecwid-shopping-cart',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Booked – Appointment Booking for WordPress',
+            'slug'      => 'booked',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'LearnPress – WordPress LMS Plugin',
+            'slug'      => 'learnpress',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Polylang',
+            'slug'      => 'polylang',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Slider Revolution',
+            'slug'      => 'revslider',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'WPML Multilingual CMS',
+            'slug'      => 'sitepress-multilingual-cms',
+            'required'  => false,
+        )
+    );
+
+   
+}
+
 
     ?>
