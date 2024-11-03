@@ -1,0 +1,317 @@
+/* --- Basic Styles --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light background color for better readability */
+    color: #333; /* Dark color for text for good contrast */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.home {
+    max-width: 1200px; /* Maximum width for the home section */
+    margin: 0 auto; /* Center align the home section */
+    padding: 20px; /* Padding around the home section */
+}
+
+/* --- Banner Section --- */
+.banner {
+    background: url('../images/blog.jpg') no-repeat center center; /* Background image for banner */
+    background-size: cover; /* Ensure the image covers the entire section */
+    color: white; /* White text color for contrast */
+    text-align: center; /* Center align text in the banner */
+    padding: 80px 20px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.banner h1 {
+    font-size: 3em; /* Large font size for the main title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.banner p {
+    font-size: 1.2em; /* Slightly larger font size for the paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.btn {
+    display: inline-block; /* Display as a block for better click area */
+    padding: 12px 25px; /* Padding for button size */
+    color: white; /* White text for buttons */
+    background-color: #007bff; /* Primary button color */
+    text-decoration: none; /* No underline on button */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* --- Featured Posts Carousel --- */
+.featured-posts {
+    margin: 40px 0; /* Espacement vertical autour des articles en vedette */
+    padding: 30px; /* Padding à l'intérieur de la section */
+    background: #ffffff; /* Fond blanc pour le contraste */
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée pour de la profondeur */
+    position: relative; /* Pour le positionnement des boutons */
+}
+
+.featured-posts h2 {
+    font-size: 26px; /* Taille de la police pour le titre de la section */
+    margin-bottom: 20px; /* Espace sous le titre */
+    text-align: center; /* Alignement centré pour le titre */
+    color: #2c3e50; /* Couleur sombre pour le titre */
+    font-weight: 600; /* Poids de la police pour le titre */
+}
+
+.carousel {
+    display: flex; /* Disposition flex pour le carrousel */
+    overflow-x: auto; /* Activation du défilement horizontal */
+    gap: 25px; /* Espacement entre les éléments du carrousel */
+    padding: 10px 0; /* Padding pour l'espacement vertical */
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+.carousel::-webkit-scrollbar {
+    height: 10px; /* Hauteur personnalisée pour la barre de défilement */
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #bbb; /* Couleur de la barre de défilement */
+    border-radius: 10px; /* Barre de défilement arrondie */
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #f9f9f9; /* Couleur du fond de la barre de défilement */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Empêcher les éléments de grandir */
+    width: 260px; /* Largeur augmentée pour une meilleure visibilité */
+    text-align: center; /* Alignement centré du texte dans les éléments */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide pour le zoom et l'ombre au survol */
+    border-radius: 12px; /* Coins arrondis pour les éléments */
+    background: #f0f0f0; /* Fond léger pour les éléments */
+    padding: 20px; /* Padding intérieur pour les éléments */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère pour la profondeur */
+    position: relative; /* Pour le positionnement de l'élément pseudo */
+    overflow: hidden; /* Pour éviter que le contenu dépasse les coins arrondis */
+}
+
+.carousel-item::before {
+    content: ''; /* Élément pseudo pour un effet décoratif */
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    border-radius: 12px; /* Correspondre au rayon de bord de l'élément */
+    background: rgba(255, 255, 255, 0.7); /* Légère superposition */
+    opacity: 0; /* Initialement caché */
+    transition: opacity 0.4s ease; /* Transition fluide */
+    z-index: 1; /* Positionner au-dessus du contenu */
+}
+
+.carousel-item:hover {
+    transform: scale(1.07); /* Légèrement agrandir au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombre plus profonde au survol */
+}
+
+.carousel-item:hover::before {
+    opacity: 1; /* Montrer l'overlay au survol */
+}
+
+.carousel-item h3 {
+    margin-top: 15px; /* Espace au-dessus du titre */
+    font-size: 20px; /* Taille de police pour les titres */
+    color: #34495e; /* Couleur sombre pour les titres */
+    font-weight: 500; /* Poids de la police pour les titres */
+}
+
+.carousel-btn {
+    position: absolute; /* Position des boutons par rapport à la section */
+    top: 50%; /* Centré verticalement */
+    transform: translateY(-50%); /* Ajustement de la position */
+    background: rgba(255, 255, 255, 0.95); /* Fond semi-transparent */
+    border: none; /* Suppression de la bordure par défaut */
+    border-radius: 50%; /* Boutons ronds */
+    width: 50px; /* Taille du bouton */
+    height: 50px; /* Taille du bouton */
+    cursor: pointer; /* Curseur pointer au survol */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); /* Ombre pour le bouton */
+    z-index: 10; /* S'assurer que les boutons sont au-dessus d'autres contenus */
+    transition: background 0.4s ease, transform 0.3s ease; /* Transition fluide pour le changement de fond */
+}
+
+.carousel-btn.prev {
+    left: 20px; /* Position pour le bouton précédent */
+}
+
+.carousel-btn.next {
+    right: 20px; /* Position pour le bouton suivant */
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 1); /* Fond solide au survol */
+    transform: scale(1.1); /* Légèrement agrandir au survol */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre plus sombre au survol */
+}
+
+.carousel-btn:focus {
+    outline: none; /* Suppression de l'outline de focus */
+}
+
+/* Popular Posts Section */
+.popular-posts {
+    background: #ffffff; /* Background color */
+    padding: 40px; /* Padding around the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin: 20px 0; /* Margin around the section */
+}
+
+.popular-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    flex-wrap: wrap; /* Wrap items to next line if needed */
+}
+
+.popular-item {
+    background: #f9f9f9; /* Background color for items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding inside each item */
+    margin: 10px; /* Margin between items */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+    flex: 1 1 calc(30% - 20px); /* Flex-basis for responsive layout */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for items */
+}
+
+.popular-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.popular-thumbnail {
+    margin-bottom: 10px; /* Space below thumbnail */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .popular-item {
+        flex: 1 1 100%; /* Stack items on smaller screens */
+    }
+}
+
+
+/* --- Reader Testimonials Section --- */
+.reader-testimonials {
+    margin: 40px 0; /* Vertical spacing for testimonials */
+    padding: 20px; /* Padding inside the section */
+    background: white; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.testimonials-list {
+    display: grid; /* Use grid layout for testimonials */
+    grid-template-columns: 1fr 1fr 1fr; /* Three-column layout */
+    gap: 20px; /* Space between testimonials */
+}
+
+.testimonial-item {
+    background: #e9ecef; /* Light background for testimonial items */
+    padding: 20px; /* Padding inside testimonial items */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+    text-align: center; /* Center align text */
+}
+
+.testimonial-item:hover {
+    background: #dcdcdc; /* Darker background on hover */
+}
+
+/* --- Newsletter Subscription Section --- */
+.newsletter {
+    text-align: center; /* Center align text in newsletter */
+    padding: 40px 20px; /* Padding for spacing */
+    background: #f8f9fa; /* Light background for newsletter */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.newsletter input[type="email"] {
+    padding: 10px; /* Padding inside the input */
+    width: 250px; /* Fixed width for input field */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space to the right of the input */
+}
+
+.newsletter button {
+    padding: 10px 15px; /* Padding for button */
+    background-color: #28a745; /* Success color for button */
+    color: white; /* White text for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.newsletter button:hover {
+    background-color: #218838; /* Darker shade for hover effect */
+}
+
+/* --- Trending Topics Section --- */
+.trending-topics {
+    margin: 40px 0; /* Vertical spacing for trending topics */
+    padding: 20px; /* Padding inside the section */
+    background: white; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.trending-list {
+    display: flex; /* Flexbox layout for trending list */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 15px; /* Space between items */
+    justify-content: center; /* Center align items */
+}
+
+.trending-list li {
+    list-style: none; /* Remove default list styling */
+    background: #f8f9fa; /* Light background for items */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding inside items */
+    transition: transform 0.2s; /* Smooth transformation on hover */
+}
+
+.trending-list li:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.trending-list a {
+    display: flex; /* Flex layout for links */
+    align-items: center; /* Center align items vertically */
+    text-decoration: none; /* No underline for links */
+    color: #333; /* Dark text color */
+}
+
+.trending-list i {
+    margin-right: 10px; /* Space between icon and text */
+    color: #007bff; /* Primary color for icons */
+    font-size: 1.5em; /* Larger icon size */
+}
+
+
+
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column; /* Stack carousel items on small screens */
+    }
+    
+    .testimonials-list {
+        grid-template-columns: 1fr; /* Single column layout for testimonials */
+    }
+}

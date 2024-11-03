@@ -1,0 +1,260 @@
+/*
+Theme Name: ModernBlogger
+Theme URI: http://example.com/modernblogger
+Author: Imene Berghout
+Author URI: http://example.com
+Description: A modern and appealing theme for blogs, featuring a clean and responsive design.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: modernblogger
+Company: Digital Concept Agency /* Add this field to indicate the company 
+*/
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Font family for the body */
+    line-height: 1.6; /* Line height for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Background color for the body */
+    color: #333; /* Default text color */
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff; /* Background color */
+    padding: 20px 0; /* Padding around the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth effect */
+}
+
+.site-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+.site-title h1 {
+    font-size: 2.5em; /* Font size for the main title */
+    color: #333; /* Text color */
+    margin: 0; /* Remove default margins */
+}
+
+.main-navigation {
+    text-align: center; /* Center the navigation */
+}
+
+.nav-menu {
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: inline-block; /* Horizontal alignment */
+}
+
+.nav-menu li {
+    display: inline; /* Display list items in line */
+    margin: 0 15px; /* Spacing between items */
+}
+
+.nav-menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: #0073aa; /* Link color */
+    font-size: 1.2em; /* Font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-menu a:hover {
+    color: #005177; /* Hover color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-menu li {
+        display: block; /* Stack items on mobile */
+        margin: 10px 0; /* Vertical spacing */
+    }
+}
+
+/* Article Styles */
+.article {
+    background: #ffffff; /* Background color for articles */
+    margin: 20px auto; /* Center articles with margin */
+    padding: 30px; /* Padding for articles */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+}
+
+.article:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.article h2 {
+    margin-top: 0; /* Remove top margin */
+    color: #e8491d; /* Heading color */
+    font-size: 2em; /* Font size for headings */
+    border-bottom: 2px solid #e8491d; /* Underline for headings */
+    padding-bottom: 10px; /* Bottom padding */
+}
+
+/* Article Excerpts */
+.article p {
+    margin-bottom: 15px; /* Bottom margin for paragraphs */
+    line-height: 1.8; /* Line height for readability */
+}
+
+/* Button Styles */
+.btn {
+    background: #35424a; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 12px 25px; /* Padding for buttons */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Inline display for buttons */
+    font-size: 1.1em; /* Font size for buttons */
+    transition: background 0.3s, transform 0.3s; /* Transition for hover effects */
+}
+
+.btn:hover {
+    background: #e8491d; /* Hover background color */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Form Styles */
+form {
+    background: #ffffff; /* Form background color */
+    padding: 30px; /* Padding for forms */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin: 20px auto; /* Center form with margin */
+}
+
+form label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Bottom margin for labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%; /* Full width for input fields */
+    padding: 12px; /* Padding for input fields */
+    margin-bottom: 15px; /* Bottom margin for input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    transition: border 0.3s, box-shadow 0.3s; /* Transition for focus effects */
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #e8491d; /* Border color on focus */
+    box-shadow: 0 0 5px rgba(232, 73, 29, 0.5); /* Shadow on focus */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ffffff; /* Footer background color */
+    color: #333; /* Footer text color */
+    padding: 40px 0; /* Padding around footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.footer-container {
+    display: flex; /* Flexbox layout for footer */
+    justify-content: space-around; /* Space around footer items */
+    flex-wrap: wrap; /* Wrap footer items */
+    max-width: 1200px; /* Max width for footer container */
+    margin: 0 auto; /* Center footer container */
+    text-align: left; /* Left-aligned text */
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1; /* Flex property for footer sections */
+    min-width: 250px; /* Minimum width for footer sections */
+    margin: 20px; /* Margin for footer sections */
+}
+
+.footer-about h2,
+.footer-links h2,
+.footer-social h2 {
+    font-size: 1.5em; /* Font size for section titles */
+    color: #e8491d; /* Title color */
+    margin-bottom: 15px; /* Bottom margin for section titles */
+}
+
+.footer-links ul {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.footer-links ul li {
+    margin: 10px 0; /* Vertical spacing between links */
+}
+
+.footer-links ul li a {
+    color: #0073aa; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-links ul li a:hover {
+    color: #e8491d; /* Hover color for links */
+}
+
+.social-icons {
+    display: flex; /* Flexbox for social icons */
+    gap: 15px; /* Space between icons */
+}
+
+.social-icons li {
+    display: inline; /* Inline display for list items */
+}
+
+.social-icons a {
+    color: #0073aa; /* Icon color */
+    font-size: 1.5em; /* Icon size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-icons a:hover {
+    color: #e8491d; /* Hover color for icons */
+}
+
+.footer-bottom {
+    text-align: center; /* Center text in footer */
+    margin-top: 20px; /* Margin above footer text */
+    font-size: 0.9em; /* Font size for footer text */
+    color: #666; /* Footer text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Vertical spacing for navigation items */
+    }
+    
+    .article {
+        margin: 10px; /* Margin for articles */
+        padding: 20px; /* Padding for articles */
+    }
+
+    header h1 {
+        font-size: 2em; /* Font size for header title */
+    }
+    
+    .footer-content h3 {
+        font-size: 1.5em; /* Font size for footer section titles */
+    }
+
+    .footer-content p {
+        font-size: 0.9em; /* Font size for footer paragraphs */
+    }
+}

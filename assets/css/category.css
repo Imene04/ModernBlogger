@@ -1,0 +1,78 @@
+.category-page {
+    max-width: 800px; /* Set a maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+}
+
+.category-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.category-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between items */
+}
+
+.article-item {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.article-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.article-thumbnail img {
+    width: 100%; /* Ensure the image covers the full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.article-info {
+    padding: 15px;
+}
+
+.article-info h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.post-excerpt {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.btn.read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn.read-more:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

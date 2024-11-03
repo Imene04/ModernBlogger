@@ -1,0 +1,175 @@
+/* Color Palette */
+:root {
+    --primary-color: #3B5998; /* Primary color (Facebook) */
+    --secondary-color: #FF6F61; /* Secondary color (red) */
+    --background-color: #F4F4F4; /* Background color */
+    --text-color: #333; /* Text color */
+    --heading-color: #222; /* Heading color */
+    --card-background: #FFFFFF; /* Card background color */
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.blog-header {
+    padding: 40px;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-header h1 {
+    font-size: 2.5em; /* Title font size */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.blog-header p {
+    font-size: 1.2em; /* Subtitle font size */
+    margin-bottom: 0; /* No space below subtitle */
+}
+
+.blog-container {
+    display: flex; /* Flexbox layout for blog container */
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Internal padding */
+}
+
+.blog {
+    flex: 3; /* Main blog area takes 3 parts */
+    padding-right: 20px; /* Space to the right */
+}
+
+.sidebar {
+    flex: 1; /* Sidebar takes 1 part */
+    background-color: var(--card-background); /* Sidebar background color */
+    padding: 20px; /* Internal padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.featured-posts, .blog-posts {
+    margin-bottom: 40px; /* Space below sections */
+}
+
+h2 {
+    color: var(--primary-color); /* Color of headings */
+    border-bottom: 2px solid var(--primary-color); /* Bottom border for emphasis */
+    padding-bottom: 10px; /* Space below heading */
+}
+
+.blog-post {
+    background-color: var(--card-background); /* Background color for blog post */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-bottom: 20px; /* Space below each post */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.blog-post:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.post-thumbnail img {
+    width: 100%; /* Full width for post thumbnail */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.badge {
+    background-color: var(--secondary-color); /* Badge background color */
+    color: white; /* Badge text color */
+    padding: 5px 10px; /* Internal padding for badge */
+    border-radius: 3px; /* Rounded corners */
+    position: absolute; /* Positioning badge */
+    top: 10px; /* Position from the top */
+    right: 10px; /* Position from the right */
+}
+
+.post-info {
+    padding: 15px; /* Internal padding for post info */
+}
+
+.post-info h3 {
+    margin: 0 0 10px; /* Margin below post title */
+}
+
+.post-meta {
+    font-size: 0.9em; /* Smaller font for metadata */
+    color: #666; /* Gray color for metadata */
+}
+
+.post-excerpt {
+    font-size: 0.95em; /* Font size for excerpt */
+    line-height: 1.5; /* Line height for readability */
+}
+
+.btn {
+    background-color: var(--primary-color); /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Internal padding for button */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.btn:hover {
+    background-color: #2d4373; /* Darker shade on hover */
+}
+
+.social-share a {
+    margin-right: 10px; /* Space between social share links */
+    font-size: 0.9em; /* Font size for social links */
+    color: var(--primary-color); /* Color for social links */
+}
+
+.pagination {
+    margin: 20px 0; /* Space above and below pagination */
+    text-align: center; /* Center the pagination */
+}
+
+.newsletter {
+    background-color: var(--card-background); /* Background color for newsletter */
+    padding: 20px; /* Internal padding */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 40px; /* Space above newsletter */
+}
+
+.newsletter h2 {
+    margin-bottom: 10px; /* Space below newsletter heading */
+}
+
+.newsletter input {
+    width: 70%; /* Width for newsletter input */
+    padding: 10px; /* Internal padding */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space to the right of input */
+}
+
+.newsletter button {
+    padding: 10px 15px; /* Internal padding for button */
+    background-color: var(--primary-color); /* Background color for button */
+    color: white; /* Text color for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for button */
+}
+
+.faq {
+    margin-top: 40px; /* Space above FAQ section */
+}
+
+.faq h2 {
+    margin-bottom: 10px; /* Space below FAQ heading */
+}
+
+.faq p {
+    margin-bottom: 5px; /* Space below FAQ paragraph */
+}
